@@ -11,7 +11,7 @@ import java.util.Set;
 @Service
 public class RecipeServiceImpl implements RecipeService {
 
-    private RecipeRepository recipeRepository;
+    RecipeRepository recipeRepository;
 
     @Autowired
     public RecipeServiceImpl(RecipeRepository recipeRepository) {

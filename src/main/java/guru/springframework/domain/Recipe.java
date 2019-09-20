@@ -1,11 +1,11 @@
 package guru.springframework.domain;
 
-import lombok.*;
+import lombok.Data;
+import lombok.NonNull;
 
 import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Objects;
-import java.util.Optional;
 import java.util.Set;
 
 @Data
@@ -33,7 +33,7 @@ public class Recipe {
     private String directions;
 
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "recipe")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "recipe") // field in Ingredient class
     private Set<Ingredient> ingredients = new HashSet<>();
 
     @OneToOne(cascade = CascadeType.ALL)
